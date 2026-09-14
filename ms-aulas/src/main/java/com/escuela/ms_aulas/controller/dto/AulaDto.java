@@ -1,25 +1,18 @@
-package com.escuela.ms_aulas.domain;
+package com.escuela.ms_aulas.controller.dto;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.escuela.ms_aulas.domain.Aula;
+import com.escuela.ms_aulas.mapper.AulaMapper;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
-@Table(name = "aulas")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Aula {
+public class AulaDto{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String nombre;
     private String ubicacion;
     private Integer capacidad;
@@ -54,7 +47,8 @@ public class Aula {
 	public void setActiva(Boolean activa) {
 		this.activa = activa;
 	}
-	
+
     
     
-    }
+    
+}
